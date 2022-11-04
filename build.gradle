@@ -14,91 +14,57 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
-
+plugins {
+  id "ua.eshepelyuk.ManifestClasspath" version "1.0.0"
+}
 apply plugin: 'forge'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-version = "4.4.4"
-group = "hardcorequesting" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "HQM-The Journey"
+version = "2.0.2"
+group= "com.hqm.hardcorequesting" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "hqm-thejourney"
 
 minecraft {
-    version = "10.13.4.1448-1.7.10"
-    runDir = "eclipse/assets"
-
-    //replacing stuff in code.
-    replace "@VERSION@", project.version
-    replaceIn "ModInformation.java"
-}
-
-def root = project.projectDir.parentFile
-sourceSets {
-    main {
-        java {
-            srcDir new File(root, "src")
-        }
-        resources {
-            srcDir new File(root, "resources")
-        }
-    }
-}
-
-processResources
-        {
-            inputs.property "version", project.version
-            inputs.property "mcversion", project.minecraft.version
-
-            // replace stuff in text files, not binary ones.
-            from(sourceSets.main.resources.srcDirs) {
-                include '**/*.info'
-                expand 'version': project.version, 'mcversion': project.minecraft.version
-            }
-
-            // copy everything else, thats not text
-            from(sourceSets.main.resources.srcDirs) {
-                exclude '**/*.info'
-            }
-        }
-
-jar {
-    exclude "**/*.psd"
-}
-
-repositories {
-    maven { // The repo from which to get waila
-        name "Mobius Repo"
-        url "http://mobiusstrip.eu/maven"
-    }
-    maven { // the repo from which to get NEI and stuff
-        name 'CB Repo'
-        url "http://chickenbones.net/maven/"
-    }
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "eclipse"
 }
 
 dependencies {
-    compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+    // you may put jars on which you depend on in ./libs
+    // or you may define them like so..
+    //compile "some.group:artifact:version:classifier"
+    //compile "some.group:artifact:version"
+      
+    // real examples
+    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
+    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
+
+    // for more info...
+    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
+    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
 }
 
-task copyChicken(type: Copy, dependsOn: "extractUserDev") {
-    from { configurations.compile }
-    include "**/*Chicken*.jar", "**/*NotEnoughItems*.jar"
-    exclude "**/CodeChickenLib*" // because CCC downloads it anyways.. -_-
-    into file("eclipse/assets/mods") // paralell to the assets dir
-
-    mustRunAfter "deobfBinJar"
-    mustRunAfter "repackMinecraft"
+compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
 }
-//tasks.setupDevWorkspace.dependsOn copyChicken
-//tasks.setupDecompWorkspace.dependsOn copyChicken
 
-def libDir = './build/libs'
+processResources
+{
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
 
-task deobfJar(type: Jar) {
-    description = 'Creates a jar file containing the non-obfuscated class files'
-    classifier = 'deobf'
-    destinationDir = file(libDir)
-    from sourceSets.main.output.classesDir
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
 }
-tasks.build.dependsOn deobfJar

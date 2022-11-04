@@ -1,11 +1,19 @@
 package hardcorequesting;
 
+import java.io.File;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerAboutToStartEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.FMLEventChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import hardcorequesting.blocks.ModBlocks;
@@ -18,98 +26,86 @@ import hardcorequesting.quests.Quest;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 
-import java.io.File;
-
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, guiFactory = "hardcorequesting.client.interfaces.HQMModGuiFactory")
 public class HardcoreQuesting {
 
-    @Instance(ModInformation.ID)
-    public static HardcoreQuesting instance;
+	@Instance(ModInformation.ID)
+	public static HardcoreQuesting instance;
 
-    @SidedProxy(clientSide = "hardcorequesting.proxies.ClientProxy", serverSide = "hardcorequesting.proxies.CommonProxy")
-    public static CommonProxy proxy;
-    public static CreativeTabs HQMTab = new HQMTab();
+	@SidedProxy(clientSide = "hardcorequesting.proxies.ClientProxy", serverSide = "hardcorequesting.proxies.CommonProxy")
+	public static CommonProxy proxy;
+	public static CreativeTabs HQMTab = new HQMTab();
 
-    public static String path;
+	public static String path;
 
-    public static File configDir;
+	public static File configDir;
 
-    public static FMLEventChannel packetHandler;
+	public static FMLEventChannel packetHandler;
 
-    private static EntityPlayer commandUser;
+	private static EntityPlayer commandUser;
 
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-        new hardcorequesting.EventHandler();
-        packetHandler = NetworkRegistry.INSTANCE.newEventDrivenChannel(ModInformation.CHANNEL);
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		new hardcorequesting.EventHandler();
+		packetHandler = NetworkRegistry.INSTANCE.newEventDrivenChannel(ModInformation.CHANNEL);
 
-        path = event.getModConfigurationDirectory().getAbsolutePath() + File.separator + ModInformation.CONFIG_LOC_NAME.toLowerCase() + File.separator;
-        configDir = new File(path);
-        ConfigHandler.initModConfig(path);
-        ConfigHandler.initEditConfig(path);
+		path = event.getModConfigurationDirectory().getAbsolutePath() + File.separator
+				+ ModInformation.CONFIG_LOC_NAME.toLowerCase() + File.separator;
+		configDir = new File(path);
+		ConfigHandler.initModConfig(path);
+		ConfigHandler.initEditConfig(path);
 
-        proxy.init();
-        proxy.initRenderers();
-        proxy.initSounds(path);
+		proxy.init();
+		proxy.initRenderers();
+		proxy.initSounds(path);
 
-        ModItems.init();
+		ModItems.init();
 
-        ModBlocks.init();
-        ModBlocks.registerBlocks();
-        ModBlocks.registerTileEntities();
+		ModBlocks.init();
+		ModBlocks.registerBlocks();
+		ModBlocks.registerTileEntities();
 
-        //Quest.init(this.path);
-    }
+		// Quest.init(this.path);
+	}
 
-    @EventHandler
-    public void load(FMLInitializationEvent event) {
-        new File(configDir + File.separator + "QuestFiles").mkdir();
-        FMLCommonHandler.instance().bus().register(instance);
+	@EventHandler
+	public void load(FMLInitializationEvent event) {
+		new File(configDir + File.separator + "QuestFiles").mkdir();
+		FMLCommonHandler.instance().bus().register(instance);
 
-        packetHandler.register(new PacketHandler());
-        new WorldEventListener();
-        new PlayerDeathEventListener();
-        new PlayerTracker();
+		packetHandler.register(new PacketHandler());
+		new WorldEventListener();
+		new PlayerDeathEventListener();
+		new PlayerTracker();
 
+		ModItems.registerRecipes();
+		ModBlocks.registerRecipes();
 
-        ModItems.registerRecipes();
-        ModBlocks.registerRecipes();
+		FMLInterModComms.sendMessage("Waila", "register", "hardcorequesting.waila.Provider.callbackRegister");
+	}
 
-        FMLInterModComms.sendMessage("Waila", "register", "hardcorequesting.waila.Provider.callbackRegister");
-    }
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event) { Quest.init(path); }
 
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
-        Quest.init(path);
-    }
+	@EventHandler
+	public void modsLoaded(FMLPostInitializationEvent event) {
 
+	}
 
-    @EventHandler
-    public void modsLoaded(FMLPostInitializationEvent event) {
+	@EventHandler
+	public void serverStarting(FMLServerStartingEvent event) { event.registerServerCommand(CommandHandler.instance); }
 
+	@EventHandler
+	public void serverAboutToStart(FMLServerAboutToStartEvent event) {
 
-    }
+	}
 
-    @EventHandler
-    public void serverStarting(FMLServerStartingEvent event) {
-        event.registerServerCommand(CommandHandler.instance);
-    }
+	@EventHandler
+	public void serverAboutToStart(FMLServerStoppingEvent event) {
 
-    @EventHandler
-    public void serverAboutToStart(FMLServerAboutToStartEvent event) {
+	}
 
-    }
+	public static EntityPlayer getPlayer() { return commandUser; }
 
-    @EventHandler
-    public void serverAboutToStart(FMLServerStoppingEvent event) {
-
-    }
-
-    public static EntityPlayer getPlayer() {
-        return commandUser;
-    }
-
-    public static void setPlayer(EntityPlayer player) {
-        commandUser = player;
-    }
+	public static void setPlayer(EntityPlayer player) { commandUser = player; }
 }

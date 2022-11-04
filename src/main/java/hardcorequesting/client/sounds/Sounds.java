@@ -1,22 +1,11 @@
 package hardcorequesting.client.sounds;
 
-
-import hardcorequesting.ModInformation;
-
 public enum Sounds {
-    COMPLETE("complete"),
-    LIFE("heart"),
-    BAG("reward"),
-    DEATH("ban"),
-    ROTTEN("rotten");
+	COMPLETE("complete"), LIFE("heart"), BAG("reward"), DEATH("ban"), ROTTEN("rotten");
 
-    private String sound;
+	private String sound;
 
-    Sounds(String sound) {
-        this.sound = sound;
-    }
+	Sounds(String sound) { this.sound = sound; }
 
-    public String getSound() {
-        return sound;
-    }
+	public String getSound() { return sound; }
 }

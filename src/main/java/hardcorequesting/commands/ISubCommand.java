@@ -1,19 +1,19 @@
 package hardcorequesting.commands;
 
-import net.minecraft.command.ICommandSender;
-
 import java.util.List;
 
+import net.minecraft.command.ICommandSender;
+
 public interface ISubCommand {
-    int getPermissionLevel();
+	int getPermissionLevel();
 
-    String getCommandName();
+	String getCommandName();
 
-    void handleCommand(ICommandSender sender, String[] arguments);
+	void handleCommand(ICommandSender sender, String[] arguments);
 
-    List<String> addTabCompletionOptions(ICommandSender sender, String[] args);
+	List<String> addTabCompletionOptions(ICommandSender sender, String[] args);
 
-    boolean isVisible(ICommandSender sender);
+	boolean isVisible(ICommandSender sender);
 
-    int[] getSyntaxOptions(ICommandSender sender);
+	int[] getSyntaxOptions(ICommandSender sender);
 }

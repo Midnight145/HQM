@@ -1,9 +1,7 @@
 package hardcorequesting.quests;
 
-
 public class QuestDataTask {
-    public boolean completed;
+	public boolean completed;
 
-    public QuestDataTask(QuestTask task) {
-    }
+	public QuestDataTask(QuestTask task) {}
 }
