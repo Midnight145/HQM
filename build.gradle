@@ -19,13 +19,17 @@ plugins {
 }
 apply plugin: 'forge'
 
-version = "2.0.2"
-group= "com.hqm.hardcorequesting" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "hqm-thejourney"
+version = "4.4.4-blight"
+group= "hardcorequesting" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "HardcoreQuesting"
+sourceCompatibility = targetCompatibility = '1.7' // Need this here so eclipse task generates correctly.
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
+    
+    replace "@VERSION@", project.version
+    replaceIn "ModInformation.java"
 }
 
 dependencies {
@@ -42,11 +46,6 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-}
-
-compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_7
-    targetCompatibility JavaVersion.VERSION_1_7
 }
 
 processResources
