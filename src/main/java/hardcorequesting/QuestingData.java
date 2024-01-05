@@ -209,10 +209,10 @@ public class QuestingData {
 	}
 
 	public void die(EntityPlayer player) {
-		if (!QuestingData.isHardcoreActive())
-			return;
-
-		removeLifeAndSendMessage(player);
+		this.getTeam().setReputation(0, this.getTeam().getReputation(0) - 10);
+		if (!QuestingData.isHardcoreActive()) { return; }
+		
+		this.removeLifeAndSendMessage(player);
 	}
 
 	/**

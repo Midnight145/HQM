@@ -1809,7 +1809,9 @@ public class Quest {
 					int type = TaskType.getType(task.getClass()).ordinal();
 					dw.writeData(type, DataBitHelper.TASK_TYPE);
 					dw.writeString(task.getDescription(), DataBitHelper.QUEST_NAME_LENGTH);
-					dw.writeString(task.getLongDescription(), DataBitHelper.QUEST_DESCRIPTION_LENGTH);
+					if (task.getLongDescription() != null) {
+						dw.writeString(task.getLongDescription(), DataBitHelper.QUEST_DESCRIPTION_LENGTH);	
+					}
 					task.save(dw);
 				}
 

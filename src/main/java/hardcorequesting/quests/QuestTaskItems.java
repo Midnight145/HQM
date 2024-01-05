@@ -237,7 +237,12 @@ public abstract class QuestTaskItems extends QuestTask {
 			dw.writeBoolean(item.hasItem);
 			if (item.hasItem) {
 				dw.writeItem(item.item.getItem());
-				dw.writeData(item.item.getItemDamage(), DataBitHelper.SHORT);
+				try {
+					dw.writeData(item.item.getItemDamage(), DataBitHelper.SHORT);
+				}
+				catch (NullPointerException e) {
+					dw.writeData(0, DataBitHelper.SHORT);
+				}
 				dw.writeNBT(item.item.getTagCompound());
 				dw.writeData(item.required, DataBitHelper.TASK_REQUIREMENT);
 				dw.writeString(ItemPrecision.getUniqueID(item.precision), DataBitHelper.ITEM_PRECISION);
