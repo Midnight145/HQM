@@ -12,3 +12,5 @@ libs
 /bin/
 .idea
 **/*.class
+.classpath
+.project
