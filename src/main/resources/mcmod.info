@@ -1,10 +1,10 @@
 [
 {
-  "modid": "HardcoreQuesting",
-  "name": "Hardcore Questing Mode",
+  "modid": "${modId}",
+  "name": "${modName}",
   "description": "This mod will add Hardcore mode with extra lives. If you use up your lives, your world will be deleted or you will be banned.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "${modVersion}",
+  "mcversion": "${minecraftVersion}",
   "url": "http://hardcorequest.com/",
   "updateUrl": "",
   "authorList": [
