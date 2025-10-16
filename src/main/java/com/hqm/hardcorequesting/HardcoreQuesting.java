@@ -32,15 +32,15 @@ import cpw.mods.fml.common.network.NetworkRegistry;
     modid = ModInformation.ID,
     name = ModInformation.NAME,
     version = ModInformation.VERSION,
-    guiFactory = "hardcorequesting.client.interfaces.HQMModGuiFactory")
+    guiFactory = "com.hqm.hardcorequesting.client.interfaces.HQMModGuiFactory")
 public class HardcoreQuesting {
 
     @Instance(ModInformation.ID)
     public static HardcoreQuesting instance;
 
     @SidedProxy(
-        clientSide = "hardcorequesting.proxies.ClientProxy",
-        serverSide = "hardcorequesting.proxies.CommonProxy")
+        clientSide = "com.hqm.hardcorequesting.proxies.ClientProxy",
+        serverSide = "com.hqm.hardcorequesting.proxies.CommonProxy")
     public static CommonProxy proxy;
     public static CreativeTabs HQMTab = new HQMTab();
 
