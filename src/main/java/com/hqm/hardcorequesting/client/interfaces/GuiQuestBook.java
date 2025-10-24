@@ -970,6 +970,7 @@ public class GuiQuestBook extends GuiBase {
             if (largeButton.isVisible(this, this.player) && largeButton.isEnabled(this, this.player)
                 && largeButton.inButtonBounds(this, x, y)) {
                 largeButton.onClick(this, this.player);
+                //fixes click through from chapters page to opening a quest
                 return;
             }
         }
