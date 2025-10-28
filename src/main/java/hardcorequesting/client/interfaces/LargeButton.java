@@ -6,10 +6,9 @@ import net.minecraft.entity.player.EntityPlayer;
 
 import org.lwjgl.opengl.GL11;
 
-import hardcorequesting.Translator;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.Translator;
 
 public abstract class LargeButton {
 

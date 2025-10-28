@@ -1,12 +1,11 @@
 package hardcorequesting.quests;
 
-import hardcorequesting.network.DataBitHelper;
-import hardcorequesting.network.DataReader;
-import hardcorequesting.network.DataWriter;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
+import hardcorequesting.network.DataBitHelper;
+import hardcorequesting.network.DataReader;
+import hardcorequesting.network.DataWriter;
 
 public class QuestTicker {
 

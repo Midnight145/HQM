@@ -9,6 +9,8 @@ import java.util.Map;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.QuestingData;
 import hardcorequesting.bag.Group;
 import hardcorequesting.bag.GroupTier;
@@ -20,9 +22,6 @@ import hardcorequesting.network.DataReader;
 import hardcorequesting.network.DataWriter;
 import hardcorequesting.network.PacketHandler;
 import hardcorequesting.network.PacketId;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class QuestLine {
 

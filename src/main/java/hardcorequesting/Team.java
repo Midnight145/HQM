@@ -6,6 +6,7 @@ import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.network.DataReader;
 import hardcorequesting.network.DataWriter;
@@ -15,8 +16,6 @@ import hardcorequesting.quests.Quest;
 import hardcorequesting.quests.QuestData;
 import hardcorequesting.reputation.Reputation;
 import hardcorequesting.reward.ReputationReward;
-
-import cpw.mods.fml.common.FMLCommonHandler;
 
 public class Team {
 

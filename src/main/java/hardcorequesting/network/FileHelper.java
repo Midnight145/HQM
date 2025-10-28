@@ -7,10 +7,9 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.Level;
 
+import cpw.mods.fml.common.FMLLog;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
-
-import cpw.mods.fml.common.FMLLog;
 
 public abstract class FileHelper {
 

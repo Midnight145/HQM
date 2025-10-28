@@ -7,12 +7,11 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 
 import org.lwjgl.opengl.GL11;
 
-import hardcorequesting.QuestingData;
-import hardcorequesting.config.ModConfig;
-
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.QuestingData;
+import hardcorequesting.config.ModConfig;
 
 @SideOnly(Side.CLIENT)
 public class GUIOverlay extends Gui {

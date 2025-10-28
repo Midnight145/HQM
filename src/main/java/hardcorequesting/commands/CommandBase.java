@@ -12,6 +12,7 @@ import net.minecraft.util.ChatComponentText;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.QuestingData;
 import hardcorequesting.Translator;

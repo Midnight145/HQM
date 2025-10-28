@@ -4,11 +4,10 @@ import java.io.File;
 
 import net.minecraftforge.common.config.Configuration;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.client.KeyboardHandler;
 import hardcorequesting.quests.Quest;
-
-import cpw.mods.fml.common.FMLCommonHandler;
 
 public class ConfigHandler {
 

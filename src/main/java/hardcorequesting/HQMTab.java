@@ -4,10 +4,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import hardcorequesting.items.ModItems;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.items.ModItems;
 
 public class HQMTab extends CreativeTabs {
 

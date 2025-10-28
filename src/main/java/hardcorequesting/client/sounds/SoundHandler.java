@@ -16,16 +16,15 @@ import net.minecraft.client.resources.SimpleReloadableResourceManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 
+import cpw.mods.fml.relauncher.ReflectionHelper;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.ModInformation;
 import hardcorequesting.QuestingData;
 import hardcorequesting.network.DataReader;
 import hardcorequesting.network.DataWriter;
 import hardcorequesting.network.PacketHandler;
 import hardcorequesting.network.PacketId;
-
-import cpw.mods.fml.relauncher.ReflectionHelper;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class SoundHandler {
 

@@ -6,9 +6,8 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.WorldEvent;
 
-import hardcorequesting.quests.QuestLine;
-
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import hardcorequesting.quests.QuestLine;
 
 public class WorldEventListener {
 

@@ -20,12 +20,11 @@ import net.minecraftforge.fluids.FluidStack;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import hardcorequesting.SaveHelper;
 import hardcorequesting.items.ModItems;
 import hardcorequesting.quests.ItemPrecision;
 import hardcorequesting.quests.Quest;
-
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiEditMenuItem extends GuiEditMenu {
 

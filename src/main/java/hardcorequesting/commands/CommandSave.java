@@ -14,6 +14,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.StatCollector;
 
 import com.google.gson.reflect.TypeToken;
+
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.Lang;
 import hardcorequesting.bag.GroupTier;

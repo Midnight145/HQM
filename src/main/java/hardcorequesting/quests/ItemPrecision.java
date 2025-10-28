@@ -8,6 +8,7 @@ import java.util.Map;
 import net.minecraft.item.ItemStack;
 
 import com.google.common.collect.ImmutableList;
+
 import hardcorequesting.OreDictionaryHelper;
 import hardcorequesting.Translator;
 

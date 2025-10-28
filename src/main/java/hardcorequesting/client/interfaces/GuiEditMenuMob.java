@@ -13,11 +13,10 @@ import net.minecraft.item.ItemStack;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.relauncher.ReflectionHelper;
 import hardcorequesting.Translator;
 import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.quests.QuestTaskMob;
-
-import cpw.mods.fml.relauncher.ReflectionHelper;
 
 public class GuiEditMenuMob extends GuiEditMenuExtended {
 

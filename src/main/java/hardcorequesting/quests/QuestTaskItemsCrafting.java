@@ -3,14 +3,13 @@ package hardcorequesting.quests;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
+import cpw.mods.fml.common.gameevent.PlayerEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.EventHandler;
 import hardcorequesting.QuestingData;
 import hardcorequesting.client.interfaces.GuiEditMenuItem;
 import hardcorequesting.network.DataReader;
-
-import cpw.mods.fml.common.gameevent.PlayerEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class QuestTaskItemsCrafting extends QuestTaskItems {
 

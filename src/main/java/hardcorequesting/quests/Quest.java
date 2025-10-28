@@ -22,6 +22,9 @@ import net.minecraft.item.ItemStack;
 import org.apache.logging.log4j.Level;
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.EventHandler;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
@@ -57,10 +60,6 @@ import hardcorequesting.reward.CommandReward;
 import hardcorequesting.reward.CommandRewardList;
 import hardcorequesting.reward.ItemStackRewardList;
 import hardcorequesting.reward.ReputationReward;
-
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class Quest {
 

@@ -11,6 +11,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.OPBookHelper;
 import hardcorequesting.SaveHelper;
 import hardcorequesting.Translator;
@@ -27,9 +29,6 @@ import hardcorequesting.client.interfaces.ResourceHelper;
 import hardcorequesting.client.interfaces.ScrollBar;
 import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.reputation.ReputationBar;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class QuestSet {
 

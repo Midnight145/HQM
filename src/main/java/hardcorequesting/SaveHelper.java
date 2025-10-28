@@ -6,11 +6,10 @@ import java.util.List;
 
 import net.minecraft.client.Minecraft;
 
-import hardcorequesting.client.interfaces.GuiColor;
-import hardcorequesting.client.interfaces.GuiQuestBook;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.client.interfaces.GuiColor;
+import hardcorequesting.client.interfaces.GuiQuestBook;
 
 public final class SaveHelper {
 

@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 import net.minecraft.entity.player.EntityPlayer;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
 import hardcorequesting.SaveHelper;
@@ -17,9 +19,6 @@ import hardcorequesting.network.DataReader;
 import hardcorequesting.network.DataWriter;
 import hardcorequesting.reputation.Reputation;
 import hardcorequesting.reputation.ReputationMarker;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class QuestTaskReputation extends QuestTask {
     // for this task to be completed, all reputation settings (up to 4) has to be

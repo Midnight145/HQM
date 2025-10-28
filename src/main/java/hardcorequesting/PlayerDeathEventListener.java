@@ -11,11 +11,10 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-import hardcorequesting.config.ModConfig;
-import hardcorequesting.items.ModItems;
-
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import hardcorequesting.config.ModConfig;
+import hardcorequesting.items.ModItems;
 
 public class PlayerDeathEventListener {
 

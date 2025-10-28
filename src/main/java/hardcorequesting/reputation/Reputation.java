@@ -13,6 +13,8 @@ import java.util.Map;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
 import hardcorequesting.SaveHelper;
@@ -31,9 +33,6 @@ import hardcorequesting.quests.Quest;
 import hardcorequesting.quests.QuestTask;
 import hardcorequesting.quests.QuestTaskReputation;
 import hardcorequesting.reward.ReputationReward;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class Reputation {
 

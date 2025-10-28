@@ -5,10 +5,9 @@ import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
 
-import hardcorequesting.Translator;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.Translator;
 
 @SideOnly(Side.CLIENT)
 public abstract class GuiEditMenu {

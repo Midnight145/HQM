@@ -14,6 +14,9 @@ import net.minecraftforge.fluids.FluidStack;
 import org.apache.logging.log4j.Level;
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
 import hardcorequesting.SaveHelper;
@@ -25,10 +28,6 @@ import hardcorequesting.client.interfaces.GuiQuestBook;
 import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.network.DataReader;
 import hardcorequesting.network.DataWriter;
-
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class QuestTaskItems extends QuestTask {
 

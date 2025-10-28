@@ -15,8 +15,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 
-import hardcorequesting.Lang;
 import com.mojang.authlib.GameProfile;
+
+import hardcorequesting.Lang;
 
 public class CommandHandler extends CommandBase {
 

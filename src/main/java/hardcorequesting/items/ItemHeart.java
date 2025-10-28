@@ -13,6 +13,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.DeathType;
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.QuestingData;
@@ -20,9 +22,6 @@ import hardcorequesting.Translator;
 import hardcorequesting.client.sounds.SoundHandler;
 import hardcorequesting.client.sounds.Sounds;
 import hardcorequesting.config.ModConfig;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemHeart extends Item {
 

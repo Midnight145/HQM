@@ -12,6 +12,9 @@ import net.minecraft.item.ItemStack;
 import org.apache.logging.log4j.Level;
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
 import hardcorequesting.SaveHelper;
@@ -28,10 +31,6 @@ import hardcorequesting.network.DataWriter;
 import hardcorequesting.quests.ItemPrecision;
 import hardcorequesting.quests.Quest;
 import hardcorequesting.quests.QuestLine;
-
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class Group {
 

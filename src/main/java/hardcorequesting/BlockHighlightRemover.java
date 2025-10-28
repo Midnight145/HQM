@@ -4,12 +4,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.event.DrawBlockHighlightEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import hardcorequesting.blocks.ModBlocks;
-import hardcorequesting.tileentity.TileEntityPortal;
-
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.blocks.ModBlocks;
+import hardcorequesting.tileentity.TileEntityPortal;
 
 @SideOnly(Side.CLIENT)
 public class BlockHighlightRemover {

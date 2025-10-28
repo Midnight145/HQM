@@ -9,6 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.bag.BagTier;
 import hardcorequesting.bag.Group;
@@ -18,9 +20,6 @@ import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.network.DataWriter;
 import hardcorequesting.network.PacketHandler;
 import hardcorequesting.network.PacketId;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemBag extends Item {
 

@@ -2,6 +2,8 @@ package hardcorequesting.reputation;
 
 import net.minecraft.entity.player.EntityPlayer;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.FileVersion;
 import hardcorequesting.SaveHelper;
 import hardcorequesting.Translator;
@@ -12,9 +14,6 @@ import hardcorequesting.client.interfaces.ResourceHelper;
 import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.quests.Quest;
 import hardcorequesting.quests.QuestSet;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ReputationBar {
 

@@ -12,10 +12,9 @@ import net.minecraft.nbt.NBTTagCompound;
 
 import org.apache.logging.log4j.Level;
 
+import cpw.mods.fml.common.FMLLog;
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
-
-import cpw.mods.fml.common.FMLLog;
 
 public class DataReader {
 

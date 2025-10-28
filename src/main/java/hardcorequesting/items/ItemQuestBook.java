@@ -10,15 +10,14 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.QuestingData;
 import hardcorequesting.Translator;
 import hardcorequesting.client.interfaces.GuiColor;
 import hardcorequesting.commands.CommandHandler;
 import hardcorequesting.network.PacketHandler;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemQuestBook extends Item {
 

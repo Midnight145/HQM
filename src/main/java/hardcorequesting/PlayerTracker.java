@@ -6,13 +6,12 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 
-import hardcorequesting.config.ModConfig;
-import hardcorequesting.network.PacketHandler;
-import hardcorequesting.quests.QuestLine;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
+import hardcorequesting.config.ModConfig;
+import hardcorequesting.network.PacketHandler;
+import hardcorequesting.quests.QuestLine;
 
 public class PlayerTracker {
 

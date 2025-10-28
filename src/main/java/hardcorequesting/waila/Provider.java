@@ -13,6 +13,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.blocks.BlockDelivery;
 import hardcorequesting.blocks.BlockPortal;
 import hardcorequesting.blocks.ModBlocks;
@@ -20,9 +22,6 @@ import hardcorequesting.quests.QuestTask;
 import hardcorequesting.tileentity.PortalType;
 import hardcorequesting.tileentity.TileEntityBarrel;
 import hardcorequesting.tileentity.TileEntityPortal;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;

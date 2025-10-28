@@ -3,6 +3,8 @@ package hardcorequesting.client.interfaces;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import hardcorequesting.SaveHelper;
 import hardcorequesting.Translator;
 import hardcorequesting.bag.Group;
@@ -15,9 +17,6 @@ import hardcorequesting.quests.QuestTaskLocation;
 import hardcorequesting.quests.QuestTaskMob;
 import hardcorequesting.reputation.Reputation;
 import hardcorequesting.reputation.ReputationMarker;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class GuiEditMenuTextEditor extends GuiEditMenu {

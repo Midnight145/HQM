@@ -4,13 +4,12 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import hardcorequesting.items.ItemBlockPortal;
 import hardcorequesting.items.ModItems;
 import hardcorequesting.tileentity.TileEntityBarrel;
 import hardcorequesting.tileentity.TileEntityPortal;
 import hardcorequesting.tileentity.TileEntityTracker;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 

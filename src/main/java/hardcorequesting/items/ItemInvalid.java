@@ -4,10 +4,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import hardcorequesting.HardcoreQuesting;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import hardcorequesting.HardcoreQuesting;
 
 /**
  * Created by Tim on 5/10/2015.

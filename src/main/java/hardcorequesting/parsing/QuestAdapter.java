@@ -14,6 +14,8 @@ import net.minecraftforge.fluids.Fluid;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+
+import cpw.mods.fml.relauncher.ReflectionHelper;
 import hardcorequesting.HardcoreQuesting;
 import hardcorequesting.SaveHelper;
 import hardcorequesting.quests.ItemPrecision;
@@ -34,8 +36,6 @@ import hardcorequesting.reputation.Reputation;
 import hardcorequesting.reputation.ReputationBar;
 import hardcorequesting.reputation.ReputationMarker;
 import hardcorequesting.reward.ReputationReward;
-
-import cpw.mods.fml.relauncher.ReflectionHelper;
 
 public class QuestAdapter {
 

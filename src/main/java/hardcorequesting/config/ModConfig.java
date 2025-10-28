@@ -7,15 +7,14 @@ import java.util.List;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 
+import cpw.mods.fml.client.config.IConfigElement;
+import cpw.mods.fml.client.event.ConfigChangedEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import hardcorequesting.ModInformation;
 import hardcorequesting.QuestingData;
 import hardcorequesting.Team;
 import hardcorequesting.items.ItemBag;
 import hardcorequesting.quests.QuestLine;
-
-import cpw.mods.fml.client.config.IConfigElement;
-import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ModConfig {
 

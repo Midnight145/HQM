@@ -13,10 +13,9 @@ import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-import hardcorequesting.ModInformation;
-
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
+import hardcorequesting.ModInformation;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 

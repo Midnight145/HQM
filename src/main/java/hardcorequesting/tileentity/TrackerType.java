@@ -2,12 +2,11 @@ package hardcorequesting.tileentity;
 
 import net.minecraft.entity.player.EntityPlayer;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import hardcorequesting.QuestingData;
 import hardcorequesting.Team;
 import hardcorequesting.Translator;
 import hardcorequesting.quests.Quest;
-
-import cpw.mods.fml.common.FMLCommonHandler;
 
 public enum TrackerType {
 

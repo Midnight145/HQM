@@ -8,11 +8,10 @@ import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import hardcorequesting.Lang;
 import hardcorequesting.QuestingData;
 import hardcorequesting.config.ModConfig;
-
-import cpw.mods.fml.common.FMLCommonHandler;
 
 public class CommandLives extends CommandBase {
 
