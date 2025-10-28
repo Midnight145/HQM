@@ -93,7 +93,7 @@ public class HardcoreQuesting {
         ModItems.registerRecipes();
         ModBlocks.registerRecipes();
 
-        FMLInterModComms.sendMessage("Waila", "register", "hardcorequesting.waila.Provider.callbackRegister");
+        FMLInterModComms.sendMessage("Waila", "register", "com.hqm.hardcorequesting.waila.Provider.callbackRegister");
     }
 
     @EventHandler

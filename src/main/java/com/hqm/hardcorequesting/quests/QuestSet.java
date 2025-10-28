@@ -847,8 +847,8 @@ public class QuestSet {
             final HashMap<Quest, Boolean> isVisibleCache = new HashMap<>();
             final HashMap<Quest, Boolean> isLinkFreeCache = new HashMap<>();
             for (final Quest quest : this.getQuests()) {
-                if ((Quest.isEditing || quest.isVisible(player, isVisibleCache, isLinkFreeCache))
-                    && quest.isMouseInObject(x, y)) {
+                if ((Quest.isEditing || (quest.isVisible(player, isVisibleCache, isLinkFreeCache)
+                    && quest.isEnabled(player, isVisibleCache, isLinkFreeCache))) && quest.isMouseInObject(x, y)) {
                     if (Quest.isEditing && gui.getCurrentMode() != EditMode.NORMAL) {
                         switch (gui.getCurrentMode()) {
                             case MOVE:
