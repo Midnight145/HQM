@@ -687,7 +687,7 @@ public class QuestingData {
                 team.loadData(version, dr, light);
             } else {
                 int _team = dr.readData(DataBitHelper.TEAMS);
-                if (teams.contains(_team)) {
+                if (teams.size() > _team) {
                     team = teams.get(_team);
                 }
             }
