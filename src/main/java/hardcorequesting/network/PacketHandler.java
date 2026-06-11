@@ -240,7 +240,12 @@ public class PacketHandler {
             }
         }
 
-        this.data[incomingData.length - missingPackets--] = incomingData;
+        int pos_to_check = incomingData.length - missingPackets--;
+        if (pos_to_check >= 0 && pos_to_check < this.data.length) {
+            this.data[pos_to_check] = incomingData;
+        } else {
+            return null;
+        }
 
         if (missingPackets != 0) {
             return null;
